@@ -31,7 +31,7 @@ public class WorkshopCart {
         WorkshopCart workshopCart = WorkshopCart.getInstance();
 
         for(int i=0; i<workshopCart.workshopArrayList.size(); i++){
-            Log.d("xlr8", workshopCart.workshopArrayList.get(i).getName()+" : "+workshopCart.workshopArrayList.get(i).getLocation()+
+            Log.d(TAG, workshopCart.workshopArrayList.get(i).getName()+" : "+workshopCart.workshopArrayList.get(i).getLocation()+
                     " : "+workshopCart.workshopArrayList.get(i).getDate()+" : "+workshopCart.workshopArrayList.get(i).getTime()+" : "+
                     workshopCart.workshopArrayList.get(i).getUserStatus()+" : "+workshopCart.workshopArrayList.get(i).getDescription()+" : "+
                     workshopCart.workshopArrayList.get(i).getImage()+" : I: "+workshopCart.workshopArrayList.get(i).getId());

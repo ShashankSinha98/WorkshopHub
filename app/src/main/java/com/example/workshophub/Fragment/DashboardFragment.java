@@ -38,10 +38,6 @@ public class DashboardFragment extends Fragment {
     private UserDatabaseHelper userDatabaseHelper;
     public  static  Set<String> workshopRegisteredSet;
 
-
-
-
-
     public DashboardFragment() {
         // Required empty public constructor
     }
@@ -56,20 +52,13 @@ public class DashboardFragment extends Fragment {
 
         userDatabaseHelper = new UserDatabaseHelper(rootView.getContext());
 
-        ArrayList<User> allUser = userDatabaseHelper.getAllUserData();
         populateAvailableWorkshopList();
-
-
 
 
         return  rootView;
     }
 
     public static void populateAvailableWorkshopList(){
-
-
-
-
 
         dashboardWorkshopAdapter =new DashboardWorkshopAdapter(rootView.getContext(), MainActivity.dashboardWorkshopAdminList, MainActivity.workshopRegisteredSet);
         LinearLayoutManager layoutManager = new LinearLayoutManager(rootView.getContext(),LinearLayoutManager.VERTICAL,false);

@@ -28,7 +28,6 @@ public class RegisterActivity extends AppCompatActivity {
     private TextInputLayout mRegisterEmailLayout;
     private TextInputLayout mRegisterPasswordLayout;
     private TextInputLayout mRegisterConfirmPasswordLayout;
-    private MaterialButton mRegisterButton;
     private MaterialButton mRegisterLoginButton;
     private ConstraintLayout mRegisterLayout;
 
@@ -43,18 +42,13 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.activity_register);
-
-
-
         mUserDatabaseHelper = new UserDatabaseHelper(this);
 
         mRegisterFullnameLayout = findViewById(R.id.register_fullname_text_input_layout);
         mRegisterEmailLayout = findViewById(R.id.register_email_text_input_layout);
         mRegisterPasswordLayout = findViewById(R.id.register_password_text_input_layout);
         mRegisterConfirmPasswordLayout = findViewById(R.id.register_confirm_password_text_input_layout);
-        mRegisterButton = findViewById(R.id.register_material_button);
         mRegisterLayout = findViewById(R.id.register_layout);
         mRegisterLoginButton = findViewById(R.id.register_login_material_button);
 
@@ -120,20 +114,14 @@ public class RegisterActivity extends AppCompatActivity {
                 User new_user = new User(fullname, password, email);
                 if(mUserDatabaseHelper.addUser(new_user) > 0){
 
-                    Toast.makeText(this, "Registration Successfull", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getResources().getString(R.string.registeration_successful), Toast.LENGTH_SHORT).show();
                     finish();
                 } else {
-                    Toast.makeText(this, "Registration Error!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getResources().getString(R.string.registeration_error), Toast.LENGTH_SHORT).show();
                 }
 
             }
         }
-
-
-
-
-
-
     }
 
     public boolean validateEmail(String email) {

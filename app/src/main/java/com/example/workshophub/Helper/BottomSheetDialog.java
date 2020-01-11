@@ -47,8 +47,6 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         workshopImage = view.findViewById(R.id.dialog_workshop_iv);
         confirmRegBtn = view.findViewById(R.id.confirm_reg_btn);
 
-        Log.d("xlr8","bottom sheet called");
-
         populateDialog(MainActivity.workshopSelected, MainActivity.sUser);
 
         confirmRegBtn.setOnClickListener(new View.OnClickListener() {
@@ -59,15 +57,10 @@ public class BottomSheetDialog extends BottomSheetDialogFragment {
         });
 
 
-
-
         return view;
     }
 
     public static void populateDialog(Workshop workshop, User user) {
-
-        Log.d("xlr8","list populated");
-
 
         workshopName.setText(workshop.getName());
         workshopDate.setText(workshop.getDate());

@@ -51,4 +51,8 @@
     <string name="web_desc">Web development is the work involved in developing a web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.</string>
     <string name="js">Javascript</string>
     <string name="js_desc">JavaScript, often abbreviated as JS, is a high-level, just-in-time compiled, multi-paradigm programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</string>
+    <string name="user">user</string>
+    <string name="user_object">UserObject</string>
+    <string name="login_first_msg">Please Login First.</string>
+    <string name="registeration_error">REGISTRATION ERROR:  Contact Developer.</string>
 </resources>

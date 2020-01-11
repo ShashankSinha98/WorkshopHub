@@ -34,7 +34,6 @@ public class AvailableWorkshopAdapter extends RecyclerView.Adapter<AvailableWork
 
     private static Context mContext;
     private static ArrayList<Workshop> mWorkshopArrayList;
-    private Activity mActivity;
     private static AlertDialog.Builder  builder;
     private Set<String> workshopRegistered;
     private static BottomSheetDialog bottomSheetDialog;
@@ -58,10 +57,6 @@ public class AvailableWorkshopAdapter extends RecyclerView.Adapter<AvailableWork
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
-
-
-        Log.d("xlr8_check","ID: "+mWorkshopArrayList.get(position).getId()+" : Set- "+workshopRegistered);
-
             holder.registerButton.setBackgroundColor(mContext.getResources().getColor(R.color.colorAccent, null));
             holder.registerButton.setText(mContext.getResources().getString(R.string.register));
             holder.registerButton.setEnabled(true);
@@ -72,8 +67,6 @@ public class AvailableWorkshopAdapter extends RecyclerView.Adapter<AvailableWork
             holder.workshopDescription.setText(mWorkshopArrayList.get(position).getDescription());
             holder.workshopLocation.setText(mWorkshopArrayList.get(position).getLocation());
             holder.workshopTime.setText(mWorkshopArrayList.get(position).getTime());
-
-
 
 
         holder.registerButton.setOnClickListener(new View.OnClickListener() {
@@ -135,10 +128,6 @@ public class AvailableWorkshopAdapter extends RecyclerView.Adapter<AvailableWork
 
                         ArrayList<User> allUser = userDatabaseHelper.getAllUserData();
 
-                        for(User user : allUser){
-                            Log.d("xlr8_all_user","I: "+user.getId()+" N: "+user.getUsername()+" P: "+user.getPassword()+" E: "+user.getEmail()
-                                    +" : W: "+user.getWorkshopRegistered());
-                        }
                     }
                 })
                 .setNegativeButton(mContext.getResources().getString(R.string.no), new DialogInterface.OnClickListener() {
@@ -160,7 +149,6 @@ public class AvailableWorkshopAdapter extends RecyclerView.Adapter<AvailableWork
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-
             workshopName = itemView.findViewById(R.id.workshop_name);
             workshopDate = itemView.findViewById(R.id.workshop_date);
             workshopTime = itemView.findViewById(R.id.workshop_time);

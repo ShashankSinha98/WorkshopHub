@@ -35,10 +35,6 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
     private SharedPreferences mSharedPreferences;
 
 
-
-
-
-
     public UserDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -84,9 +80,6 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
     public boolean checkIfEmailExist(String email){
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor cursor = database.rawQuery("SELECT * FROM "+TABLE_NAME +" where "+ EMAIL+" = ? ", new String[]{email});
-
-        Log.d("xlr8_CU: ","CC: "+cursor.getCount());
-
         return cursor.getCount() > 0;
 
     }
@@ -114,10 +107,7 @@ public class UserDatabaseHelper extends SQLiteOpenHelper {
     public void updateData(User user, String id){
         ContentValues cv = new ContentValues();
         String current_status = user.getWorkshopRegistered();
-
-        Log.d("xlr889","ID: "+id);
         String updated_status = current_status+"#"+id;
-        Log.d("xlr889_US","ID: "+id);
         cv.put(WORKSHOP_REGISTERED,updated_status);
 
         SQLiteDatabase database = this.getWritableDatabase();

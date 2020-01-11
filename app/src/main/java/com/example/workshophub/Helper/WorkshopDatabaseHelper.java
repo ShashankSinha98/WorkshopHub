@@ -29,10 +29,6 @@ public class WorkshopDatabaseHelper extends SQLiteOpenHelper {
     private static final String VENUE = "venue";
 
 
-
-
-
-
     public WorkshopDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }

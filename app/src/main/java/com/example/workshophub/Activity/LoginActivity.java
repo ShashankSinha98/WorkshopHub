@@ -28,15 +28,11 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextInputLayout mLoginEmailTextInputLayout;
     private TextInputLayout mLoginPasswordTextInputLayout;
-    private MaterialButton mLoginMaterialButton;
     private MaterialButton mLoginRegisterMaterialButton;
     private ConstraintLayout mLoginLayout;
 
     private UserDatabaseHelper mUserDatabaseHelper;
-
     private SharedPreferences mSharedPreferences;
-
-
 
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
     private static final String LOGIN_STATUS = "login_status";
@@ -55,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
 
         mLoginEmailTextInputLayout = findViewById(R.id.login_email_text_input_layout);
         mLoginPasswordTextInputLayout = findViewById(R.id.login_password_text_input_layout);
-        mLoginMaterialButton = findViewById(R.id.login_material_button);
         mLoginRegisterMaterialButton = findViewById(R.id.login_register_material_button);
         mLoginLayout = findViewById(R.id.login_layout);
 
@@ -71,15 +66,13 @@ public class LoginActivity extends AppCompatActivity {
             prefsEditor.putBoolean(IS_LOGGED,true);
             Gson gson = new Gson();
             mSharedPreferences = getApplicationContext().getSharedPreferences(LOGIN_STATUS,0);
-            String json = mSharedPreferences.getString("UserObject", "");
+            String json = mSharedPreferences.getString(getResources().getString(R.string.user_object), "");
             User user = gson.fromJson(json, User.class);
             Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-            loginIntent.putExtra("user",user);
+            loginIntent.putExtra(getResources().getString(R.string.user),user);
             finish();
             startActivity(loginIntent);
         }
-
-
 
 
         mLoginRegisterMaterialButton.setOnClickListener(new View.OnClickListener() {
@@ -88,10 +81,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
             }
         });
-
-
-
-
 
     }
 
@@ -133,13 +122,13 @@ public class LoginActivity extends AppCompatActivity {
                 prefsEditor.putBoolean(IS_LOGGED,true);
                 Gson gson = new Gson();
                 String json = gson.toJson(user);
-                prefsEditor.putString("UserObject", json);
+                prefsEditor.putString(getResources().getString(R.string.user_object), json);
                 prefsEditor.commit();
 
 
                 Snackbar.make(mLoginLayout, getResources().getString(R.string.login_success), Snackbar.LENGTH_SHORT).show();
                 Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
-                loginIntent.putExtra("user",user);
+                loginIntent.putExtra(getResources().getString(R.string.user),user);
                 finish();
                 startActivity(loginIntent);
 
