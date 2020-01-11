@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Workshop Hub</string>
+    <string name="login">Login</string>
+    <string name="fullname">Full Name</string>
+    <string name="login_fullname_error">Name cannot be greater than 30 characters</string>
+    <string name="password">Password</string>
+    <string name="need_an_account">Need an account?</string>
+    <string name="click_here">Click Here</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="email_error">Not a valid email address</string>
+    <string name="password_error">Minimum 8 characters password</string>
+    <string name="email_empty_error">Email feild cannot be null</string>
+    <string name="password_empty_error">Password feild cannot be null</string>
+    <string name="empty_feild_error">All Feilds Are Necessary</string>
+    <string name="password_not_matching">Password Mismatch</string>
+    <string name="login_error">Login Error. Please Check Your EMAIL And PASSWORD</string>
+    <string name="login_success">Logged In</string>
+    <string name="welcome">Welcome</string>
+    <string name="logout">Logout</string>
+    <string name="logout_message">Do you want to logout ?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="available">Available</string>
+    <string name="registered">Registered</string>
+    <string name="register_message">Are you sure you want to register?</string>
+    <string name="taarangana_desc">Taarangana, the annual cultural fest of IGDTUW (formerly IGIT), is the cultural fest of the only Women Technical University of India. The cultural fest over two days hosts a wide array of enthusiastic students who indulge in a myriad activities to display and dabble with their creativity. The fest is an exquisite exposure of technical minds to their latent artistic skills. Multitudes of students swarm to participate and interact over interesting cultural events and some great food at IGDTUW, every February.</string>
+    <string name="rendezvous_desc">Rendezvous, famously known as RDV is the annual Cultural Festival of the Indian Institute of Technology, Delhi. It is a four-day-long event held in October every year. It is considered to be Asia\'s Largest College Cultural Festival after Mood Indigo which is the largest College Cultural Festival in Asia.</string>
+    <string name="odyssey_desc">Odyssey- the word itself instills a sense of excitement, thrill and anticipation. Since its very first edition in 2014, Odyssey has been the heart and soul of everyone at IIIT-Delhi. With the aim of transforming our campus into realms of legendary themes and the enthusiasm of everyone involved in the fest, Odyssey’18 set out to be the most memorable one yet.</string>
+    <string name="moksha_desc">Moksha, the annual cultural festival of Netaji Subhas University of Technology, started in 2003. It is organised in the month of March.</string>
+    <string name="engifest_desc">Engifest is the annual cultural festival of Delhi Technological University. Usually held in the month of February, it is a three-day-long event.</string>
+    <string name="email_already_registered">Email Already Registered</string>
+    <string name="registeration_successful">Registration Successful</string>
+    <string name="login_required">Login Required</string>
+    <string name="login_required_msg">You need to login first in order to register.</string>
+    <string name="ok_login">Login</string>
+    <string name="dissmiss">Dissmiss</string>
+    <string name="android">Android Development</string>
+    <string name="android_desc">Android software development is the process by which new applications are created for devices running the Android operating system. Such apps can be written using Kotlin, Java, and C++ languages using the Android software development kit (SDK), while using other languages is also possible.</string>
+    <string name="ml">Machine Learning</string>
+    <string name="ml_desc">Machine learning is the scientific study of algorithms and statistical models that computer systems use to perform a specific task without using explicit instructions, relying on patterns and inference instead. It is seen as a subset of artificial intelligence.</string>
+    <string name="python">Python Development</string>
+    <string name="python_desc">Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python\'s design philosophy emphasizes code readability with its notable use of significant whitespace.</string>
+    <string name="web">Web Development</string>
+    <string name="web_desc">Web development is the work involved in developing a web site for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.</string>
+    <string name="js">Javascript</string>
+    <string name="js_desc">JavaScript, often abbreviated as JS, is a high-level, just-in-time compiled, multi-paradigm programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</string>
+</resources>

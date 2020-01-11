@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dialog_workshop_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        android:src="@drawable/moksha"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/dialog_workshop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/loc_icon"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black"
+        android:text="Moksha"
+        app:layout_constraintStart_toEndOf="@id/dialog_workshop_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toEndOf="@id/dialog_workshop_iv"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/black"/>
+
+    <TextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time : "
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/dialog_workshop_iv"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        app:layout_constraintEnd_toStartOf="@id/home_icon"
+        android:id="@+id/dialog_workshop_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6 PM Onwards"
+        android:textColor="@color/light_blue"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@id/time_tv"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date : "
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/dialog_workshop_iv"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_time"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/dialog_workshop_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Feburary 2020"
+        android:textColor="@color/green"
+        app:layout_constraintEnd_toStartOf="@id/home_icon"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@id/date_tv"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_time"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        />
+
+
+    <TextView
+        android:id="@+id/venue_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Venue : "
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/dialog_workshop_iv"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_date"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/dialog_workshop_venue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Dwarka Mor"
+        app:layout_constraintEnd_toStartOf="@id/home_icon"
+        android:textColor="@color/red"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@id/venue_tv"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_date"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        />
+
+    <TextView
+        android:id="@+id/dialog_workshop_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="New Delhi"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/loc_icon"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/loc_icon"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_on_black_24dp"
+        app:layout_constraintEnd_toStartOf="@id/dialog_workshop_location"
+        android:layout_marginRight="2dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/rd_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registration Details"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_workshop_venue"/>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toEndOf="@id/rd_tv"
+        app:layout_constraintBottom_toBottomOf="@id/rd_tv"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:id="@+id/home_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home_40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/line"/>
+
+    <ImageView
+        android:id="@+id/reg_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reg_paste_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_2"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"/>
+
+
+
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name : "
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rd_tv"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/dialog_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="SHASHANK SINHA"
+        android:textColor="#99000000"
+        app:layout_constraintEnd_toStartOf="@id/reg_icon"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@id/name_tv"
+        app:layout_constraintBottom_toBottomOf="@id/name_tv"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email : "
+        style="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_user_name"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/dialog_user_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="sinhashashank.98@gmail.com"
+        android:textColor="#99000000"
+        app:layout_constraintEnd_toStartOf="@id/reg_icon"
+        style="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toEndOf="@id/email_tv"
+        app:layout_constraintBottom_toBottomOf="@id/email_tv"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirm_reg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Registration"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/dialog_user_email"/>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
